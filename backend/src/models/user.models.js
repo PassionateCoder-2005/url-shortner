@@ -13,7 +13,7 @@ let userSchema=mongoose.Schema({
     password:{
         type:String,
         required:[true,"password is required"]
-    }
+    },
 },{ timestamps:true });
 userSchema.pre("save",async function(){
     if(this.isModified("password")){
